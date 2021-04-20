@@ -1,0 +1,13 @@
+[Unit]
+Description=Borg Backup Service
+
+[Service]
+Type=simple
+Nice=19
+IOSchedulingClass=2
+IOSchedulingPriority=7
+EnvironmentFile=/etc/sysconfig/borg
+# this will ensure the repo isn't locked for any reason, e.g. the
+# system was rebooted while a previous backup was happening
+ExecStartPre=/usr/bin/borg break-lock ${BORG_REPO}
+ExecStart=/root/borg_backup.sh

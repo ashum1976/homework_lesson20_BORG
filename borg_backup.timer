@@ -1,0 +1,11 @@
+[Unit]
+Description=Borg Backup Timer
+
+[Timer]
+WakeSystem=false
+#Запускаем задачу каждые 5 минут, со случайеой задержкой в пределах 1 минуты
+OnCalendar=*-*-* *:00/5
+RandomizedDelaySec=1min
+
+[Install]
+WantedBy=timers.target
