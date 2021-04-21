@@ -240,7 +240,6 @@ ___
 
     [root@client vagrant]# dmesg -H
 
-
 **Просмотр логов - утилита lnav (Log File Navigator)**
 
     [root@client log]# lnav
