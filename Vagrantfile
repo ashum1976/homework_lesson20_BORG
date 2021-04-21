@@ -24,7 +24,7 @@ MACHINES = {
                         }
                   },
   :"client" => {
-              # VM box
+              # VM box 
               :box_conf => "centos/8",
               # VM CPU count
               :cpus => 1,
